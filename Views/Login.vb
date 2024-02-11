@@ -1,6 +1,6 @@
 ﻿Imports System.Net.Http
 Imports System.Text
-
+Imports Models.User
 Public Class Login
     Private Async Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
@@ -12,6 +12,14 @@ Public Class Login
                                     success
                                     token
                                     error
+                                    user{{
+                                        id
+                                        email
+                                        firstName
+                                        lastName
+                                        document
+                                        phone
+                                  }}
                                 }}
                             }}"
 

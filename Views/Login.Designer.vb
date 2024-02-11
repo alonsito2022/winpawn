@@ -41,9 +41,9 @@ Partial Class Login
         Me.PanelLogin.Controls.Add(Me.lblEmail)
         Me.PanelLogin.Controls.Add(Me.txtPassword)
         Me.PanelLogin.Controls.Add(Me.txtEmail)
-        Me.PanelLogin.Location = New System.Drawing.Point(12, 12)
+        Me.PanelLogin.Location = New System.Drawing.Point(925, 12)
         Me.PanelLogin.Name = "PanelLogin"
-        Me.PanelLogin.Size = New System.Drawing.Size(286, 272)
+        Me.PanelLogin.Size = New System.Drawing.Size(297, 632)
         Me.PanelLogin.TabIndex = 0
         Me.PanelLogin.Text = "Login"
         '
@@ -99,9 +99,10 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(310, 296)
+        Me.ClientSize = New System.Drawing.Size(1234, 656)
         Me.Controls.Add(Me.PanelLogin)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PanelLogin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLogin.ResumeLayout(False)
