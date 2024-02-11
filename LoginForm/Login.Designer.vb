@@ -20,15 +20,15 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelLogin = New DevExpress.XtraEditors.GroupControl()
-        Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
-        Me.lblEmail = New DevExpress.XtraEditors.LabelControl()
-        Me.lblPassword = New DevExpress.XtraEditors.LabelControl()
         Me.btnLogin = New DevExpress.XtraEditors.SimpleButton()
+        Me.lblPassword = New DevExpress.XtraEditors.LabelControl()
+        Me.lblEmail = New DevExpress.XtraEditors.LabelControl()
+        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
         CType(Me.PanelLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelLogin.SuspendLayout()
-        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelLogin
@@ -47,33 +47,15 @@ Partial Class Login
         Me.PanelLogin.TabIndex = 0
         Me.PanelLogin.Text = "Login"
         '
-        'txtEmail
+        'btnLogin
         '
-        Me.txtEmail.Location = New System.Drawing.Point(75, 84)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Properties.Appearance.Options.UseFont = True
-        Me.txtEmail.Size = New System.Drawing.Size(155, 26)
-        Me.txtEmail.TabIndex = 0
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(75, 140)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Properties.Appearance.Options.UseFont = True
-        Me.txtPassword.Size = New System.Drawing.Size(155, 26)
-        Me.txtPassword.TabIndex = 1
-        '
-        'lblEmail
-        '
-        Me.lblEmail.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Appearance.Options.UseFont = True
-        Me.lblEmail.Location = New System.Drawing.Point(75, 55)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(54, 19)
-        Me.lblEmail.TabIndex = 2
-        Me.lblEmail.Text = "Correo:"
+        Me.btnLogin.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Appearance.Options.UseFont = True
+        Me.btnLogin.Location = New System.Drawing.Point(105, 183)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(95, 37)
+        Me.btnLogin.TabIndex = 4
+        Me.btnLogin.Text = "Login"
         '
         'lblPassword
         '
@@ -85,15 +67,33 @@ Partial Class Login
         Me.lblPassword.TabIndex = 3
         Me.lblPassword.Text = "Contraseña"
         '
-        'btnLogin
+        'lblEmail
         '
-        Me.btnLogin.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Appearance.Options.UseFont = True
-        Me.btnLogin.Location = New System.Drawing.Point(105, 183)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(95, 37)
-        Me.btnLogin.TabIndex = 4
-        Me.btnLogin.Text = "Login"
+        Me.lblEmail.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Appearance.Options.UseFont = True
+        Me.lblEmail.Location = New System.Drawing.Point(75, 55)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(54, 19)
+        Me.lblEmail.TabIndex = 2
+        Me.lblEmail.Text = "Correo:"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(75, 140)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Properties.Appearance.Options.UseFont = True
+        Me.txtPassword.Size = New System.Drawing.Size(155, 26)
+        Me.txtPassword.TabIndex = 1
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(75, 84)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Properties.Appearance.Options.UseFont = True
+        Me.txtEmail.Size = New System.Drawing.Size(155, 26)
+        Me.txtEmail.TabIndex = 0
         '
         'Login
         '
@@ -106,8 +106,8 @@ Partial Class Login
         CType(Me.PanelLogin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelLogin.ResumeLayout(False)
         Me.PanelLogin.PerformLayout()
-        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
