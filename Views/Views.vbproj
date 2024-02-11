@@ -96,6 +96,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -137,6 +138,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Complements\Complements.vbproj">
+      <Project>{362706f9-ab66-49c1-a2ec-a4419978a207}</Project>
+      <Name>Complements</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Graphql\Graphql.vbproj">
+      <Project>{dfe29b40-7df7-4b9a-b42a-19004363d9fc}</Project>
+      <Name>Graphql</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.vbproj">
       <Project>{d39e2aa4-46d9-493d-bcc1-30605eca2426}</Project>
       <Name>Models</Name>

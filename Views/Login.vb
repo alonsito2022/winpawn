@@ -1,55 +1,26 @@
 ﻿Imports System.Net.Http
 Imports System.Text
-Imports Models.User
+Imports Models.LoginResult
+Imports Graphql.Users
+Imports Models
+
 Public Class Login
     Private Async Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         Dim email As String = txtEmail.Text
         Dim password As String = txtPassword.Text
 
-        Dim query As String = $"mutation{{
-                                loginUser(email:""{email}"", password:""{password}""){{
-                                    success
-                                    token
-                                    error
-                                    user{{
-                                        id
-                                        email
-                                        firstName
-                                        lastName
-                                        document
-                                        phone
-                                  }}
-                                }}
-                            }}"
+        Dim result As LoginResult = Await getLogin(email, password)
 
-        ' Construye la consulta GraphQL como un objeto anónimo
-        Dim requestData = New With {
-            .query = query
-        }
+        If result.ErrorMessage IsNot Nothing Then
+            MessageBox.Show(result.ErrorMessage, "Error")
+        ElseIf result.User IsNot Nothing Then
+            ' Hacer algo con el usuario, por ejemplo, mostrar un mensaje de bienvenida
+            MessageBox.Show("¡Bienvenido, " & result.User.firstName & "!", "Inicio de sesión exitoso")
+        Else
+            MessageBox.Show("No se pudo iniciar sesión.", "Error")
+        End If
 
-        Dim jsonRequest As String = Newtonsoft.Json.JsonConvert.SerializeObject(requestData)
-
-        Dim httpClient As New HttpClient()
-        Dim requestContent As New StringContent(jsonRequest, Encoding.UTF8, "application/json")
-
-        ' Establece la URL del servidor GraphQL al que deseas enviar la consulta
-        Dim graphqlEndpoint As String = "http://192.168.1.20:8000/graphql"
-
-        Try
-            Dim response = Await httpClient.PostAsync(graphqlEndpoint, requestContent)
-
-            If response.IsSuccessStatusCode Then
-                Dim jsonResponse As String = Await response.Content.ReadAsStringAsync()
-                ' Aquí puedes procesar la respuesta GraphQL en formato JSON según tus necesidades
-                MessageBox.Show("Respuesta del servidor: " & jsonResponse, "Respuesta GraphQL")
-            Else
-                MessageBox.Show("Error al enviar la solicitud: " & response.StatusCode.ToString(), "Error")
-            End If
-        Catch ex As Exception
-            MessageBox.Show("Error al enviar la solicitud: " & ex.Message, "Error")
-        Finally
-            httpClient.Dispose()
-        End Try
     End Sub
+
 End Class
