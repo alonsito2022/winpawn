@@ -41,9 +41,9 @@ Partial Class Login
         Me.PanelLogin.Controls.Add(Me.lblEmail)
         Me.PanelLogin.Controls.Add(Me.txtPassword)
         Me.PanelLogin.Controls.Add(Me.txtEmail)
-        Me.PanelLogin.Location = New System.Drawing.Point(925, 12)
+        Me.PanelLogin.Location = New System.Drawing.Point(12, 12)
         Me.PanelLogin.Name = "PanelLogin"
-        Me.PanelLogin.Size = New System.Drawing.Size(297, 632)
+        Me.PanelLogin.Size = New System.Drawing.Size(758, 445)
         Me.PanelLogin.TabIndex = 0
         Me.PanelLogin.Text = "Login"
         '
@@ -51,7 +51,7 @@ Partial Class Login
         '
         Me.btnLogin.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.Appearance.Options.UseFont = True
-        Me.btnLogin.Location = New System.Drawing.Point(105, 183)
+        Me.btnLogin.Location = New System.Drawing.Point(329, 265)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(95, 37)
         Me.btnLogin.TabIndex = 4
@@ -61,7 +61,7 @@ Partial Class Login
         '
         Me.lblPassword.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPassword.Appearance.Options.UseFont = True
-        Me.lblPassword.Location = New System.Drawing.Point(75, 121)
+        Me.lblPassword.Location = New System.Drawing.Point(299, 203)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(79, 19)
         Me.lblPassword.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class Login
         '
         Me.lblEmail.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblEmail.Appearance.Options.UseFont = True
-        Me.lblEmail.Location = New System.Drawing.Point(75, 55)
+        Me.lblEmail.Location = New System.Drawing.Point(299, 137)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(54, 19)
         Me.lblEmail.TabIndex = 2
@@ -79,7 +79,7 @@ Partial Class Login
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(75, 140)
+        Me.txtPassword.Location = New System.Drawing.Point(299, 229)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassword.Properties.Appearance.Options.UseFont = True
@@ -88,7 +88,7 @@ Partial Class Login
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(75, 84)
+        Me.txtEmail.Location = New System.Drawing.Point(299, 166)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmail.Properties.Appearance.Options.UseFont = True
@@ -99,7 +99,7 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1234, 656)
+        Me.ClientSize = New System.Drawing.Size(782, 469)
         Me.Controls.Add(Me.PanelLogin)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

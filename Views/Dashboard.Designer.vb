@@ -22,105 +22,203 @@ Partial Class Dashboard
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.LateralMenu = New System.Windows.Forms.Panel()
-        Me.btnMenu = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.SubMenu = New System.Windows.Forms.Panel()
-        Me.btnSubMenu1 = New System.Windows.Forms.Button()
-        Me.btnSubMenu2 = New System.Windows.Forms.Button()
+        Me.btnAdmin = New System.Windows.Forms.Button()
+        Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.SubMenuAdmin = New System.Windows.Forms.Panel()
+        Me.btnUser = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnConfig = New System.Windows.Forms.Button()
+        Me.SubMenuConfig = New System.Windows.Forms.Panel()
+        Me.btnLetter = New System.Windows.Forms.Button()
+        Me.btnFlat = New System.Windows.Forms.Button()
+        Me.btnCash = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.SubMenuReport = New System.Windows.Forms.Panel()
+        Me.btnReport2 = New System.Windows.Forms.Button()
+        Me.btnReport1 = New System.Windows.Forms.Button()
+        Me.PanelTop = New System.Windows.Forms.Panel()
+        Me.PanelBotton = New System.Windows.Forms.Panel()
+        Me.PanelBody = New System.Windows.Forms.Panel()
+        Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
+        Me.ImgLogo = New System.Windows.Forms.PictureBox()
         Me.LateralMenu.SuspendLayout()
-        Me.SubMenu.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.SubMenuAdmin.SuspendLayout()
+        Me.SubMenuConfig.SuspendLayout()
+        Me.SubMenuReport.SuspendLayout()
+        Me.PanelBody.SuspendLayout()
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LateralMenu
         '
         Me.LateralMenu.AutoScroll = True
         Me.LateralMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
-        Me.LateralMenu.Controls.Add(Me.Panel2)
+        Me.LateralMenu.Controls.Add(Me.SubMenuReport)
         Me.LateralMenu.Controls.Add(Me.Button1)
-        Me.LateralMenu.Controls.Add(Me.SubMenu)
-        Me.LateralMenu.Controls.Add(Me.btnMenu)
-        Me.LateralMenu.Controls.Add(Me.Panel1)
+        Me.LateralMenu.Controls.Add(Me.btnCash)
+        Me.LateralMenu.Controls.Add(Me.SubMenuConfig)
+        Me.LateralMenu.Controls.Add(Me.btnConfig)
+        Me.LateralMenu.Controls.Add(Me.SubMenuAdmin)
+        Me.LateralMenu.Controls.Add(Me.btnAdmin)
+        Me.LateralMenu.Controls.Add(Me.PanelLogo)
         Me.LateralMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.LateralMenu.Location = New System.Drawing.Point(0, 0)
         Me.LateralMenu.Name = "LateralMenu"
         Me.LateralMenu.Size = New System.Drawing.Size(200, 561)
         Me.LateralMenu.TabIndex = 0
         '
-        'btnMenu
+        'btnAdmin
         '
-        Me.btnMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnMenu.FlatAppearance.BorderSize = 0
-        Me.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMenu.ForeColor = System.Drawing.Color.White
-        Me.btnMenu.Location = New System.Drawing.Point(0, 90)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.btnMenu.Size = New System.Drawing.Size(200, 45)
-        Me.btnMenu.TabIndex = 1
-        Me.btnMenu.Text = "Usuarios"
-        Me.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnMenu.UseVisualStyleBackColor = True
+        Me.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnAdmin.FlatAppearance.BorderSize = 0
+        Me.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdmin.ForeColor = System.Drawing.Color.White
+        Me.btnAdmin.Location = New System.Drawing.Point(0, 90)
+        Me.btnAdmin.Name = "btnAdmin"
+        Me.btnAdmin.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnAdmin.Size = New System.Drawing.Size(200, 45)
+        Me.btnAdmin.TabIndex = 1
+        Me.btnAdmin.Text = "Administracion"
+        Me.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdmin.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'PanelLogo
         '
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 90)
-        Me.Panel1.TabIndex = 0
+        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLogo.Name = "PanelLogo"
+        Me.PanelLogo.Size = New System.Drawing.Size(200, 90)
+        Me.PanelLogo.TabIndex = 0
         '
-        'SubMenu
+        'SubMenuAdmin
         '
-        Me.SubMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.SubMenu.Controls.Add(Me.btnSubMenu2)
-        Me.SubMenu.Controls.Add(Me.btnSubMenu1)
-        Me.SubMenu.Dock = System.Windows.Forms.DockStyle.Top
-        Me.SubMenu.Location = New System.Drawing.Point(0, 135)
-        Me.SubMenu.Name = "SubMenu"
-        Me.SubMenu.Size = New System.Drawing.Size(200, 87)
-        Me.SubMenu.TabIndex = 2
+        Me.SubMenuAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuAdmin.Controls.Add(Me.btnPrint)
+        Me.SubMenuAdmin.Controls.Add(Me.btnUser)
+        Me.SubMenuAdmin.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SubMenuAdmin.Location = New System.Drawing.Point(0, 135)
+        Me.SubMenuAdmin.Name = "SubMenuAdmin"
+        Me.SubMenuAdmin.Size = New System.Drawing.Size(200, 87)
+        Me.SubMenuAdmin.TabIndex = 2
         '
-        'btnSubMenu1
+        'btnUser
         '
-        Me.btnSubMenu1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnSubMenu1.FlatAppearance.BorderSize = 0
-        Me.btnSubMenu1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnSubMenu1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.btnSubMenu1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubMenu1.ForeColor = System.Drawing.Color.White
-        Me.btnSubMenu1.Location = New System.Drawing.Point(0, 0)
-        Me.btnSubMenu1.Name = "btnSubMenu1"
-        Me.btnSubMenu1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.btnSubMenu1.Size = New System.Drawing.Size(200, 40)
-        Me.btnSubMenu1.TabIndex = 0
-        Me.btnSubMenu1.Text = "Button1"
-        Me.btnSubMenu1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSubMenu1.UseVisualStyleBackColor = True
+        Me.btnUser.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnUser.FlatAppearance.BorderSize = 0
+        Me.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUser.ForeColor = System.Drawing.Color.White
+        Me.btnUser.Location = New System.Drawing.Point(0, 0)
+        Me.btnUser.Name = "btnUser"
+        Me.btnUser.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnUser.Size = New System.Drawing.Size(200, 40)
+        Me.btnUser.TabIndex = 0
+        Me.btnUser.Text = "Usuarios"
+        Me.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUser.UseVisualStyleBackColor = True
         '
-        'btnSubMenu2
+        'btnPrint
         '
-        Me.btnSubMenu2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnSubMenu2.FlatAppearance.BorderSize = 0
-        Me.btnSubMenu2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnSubMenu2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.btnSubMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSubMenu2.ForeColor = System.Drawing.Color.White
-        Me.btnSubMenu2.Location = New System.Drawing.Point(0, 40)
-        Me.btnSubMenu2.Name = "btnSubMenu2"
-        Me.btnSubMenu2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.btnSubMenu2.Size = New System.Drawing.Size(200, 40)
-        Me.btnSubMenu2.TabIndex = 1
-        Me.btnSubMenu2.Text = "Button2"
-        Me.btnSubMenu2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSubMenu2.UseVisualStyleBackColor = True
+        Me.btnPrint.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnPrint.FlatAppearance.BorderSize = 0
+        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.ForeColor = System.Drawing.Color.White
+        Me.btnPrint.Location = New System.Drawing.Point(0, 40)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnPrint.Size = New System.Drawing.Size(200, 40)
+        Me.btnPrint.TabIndex = 1
+        Me.btnPrint.Text = "Impresoras"
+        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'btnConfig
+        '
+        Me.btnConfig.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnConfig.FlatAppearance.BorderSize = 0
+        Me.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfig.ForeColor = System.Drawing.Color.White
+        Me.btnConfig.Location = New System.Drawing.Point(0, 222)
+        Me.btnConfig.Name = "btnConfig"
+        Me.btnConfig.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnConfig.Size = New System.Drawing.Size(200, 45)
+        Me.btnConfig.TabIndex = 3
+        Me.btnConfig.Text = "Configuracion"
+        Me.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnConfig.UseVisualStyleBackColor = True
+        '
+        'SubMenuConfig
+        '
+        Me.SubMenuConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuConfig.Controls.Add(Me.btnLetter)
+        Me.SubMenuConfig.Controls.Add(Me.btnFlat)
+        Me.SubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SubMenuConfig.Location = New System.Drawing.Point(0, 267)
+        Me.SubMenuConfig.Name = "SubMenuConfig"
+        Me.SubMenuConfig.Size = New System.Drawing.Size(200, 87)
+        Me.SubMenuConfig.TabIndex = 4
+        '
+        'btnLetter
+        '
+        Me.btnLetter.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnLetter.FlatAppearance.BorderSize = 0
+        Me.btnLetter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnLetter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLetter.ForeColor = System.Drawing.Color.White
+        Me.btnLetter.Location = New System.Drawing.Point(0, 40)
+        Me.btnLetter.Name = "btnLetter"
+        Me.btnLetter.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnLetter.Size = New System.Drawing.Size(200, 40)
+        Me.btnLetter.TabIndex = 1
+        Me.btnLetter.Text = "Carta"
+        Me.btnLetter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLetter.UseVisualStyleBackColor = True
+        '
+        'btnFlat
+        '
+        Me.btnFlat.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnFlat.FlatAppearance.BorderSize = 0
+        Me.btnFlat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnFlat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnFlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFlat.ForeColor = System.Drawing.Color.White
+        Me.btnFlat.Location = New System.Drawing.Point(0, 0)
+        Me.btnFlat.Name = "btnFlat"
+        Me.btnFlat.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnFlat.Size = New System.Drawing.Size(200, 40)
+        Me.btnFlat.TabIndex = 0
+        Me.btnFlat.Text = "Planos"
+        Me.btnFlat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnFlat.UseVisualStyleBackColor = True
+        '
+        'btnCash
+        '
+        Me.btnCash.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnCash.FlatAppearance.BorderSize = 0
+        Me.btnCash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnCash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCash.ForeColor = System.Drawing.Color.White
+        Me.btnCash.Location = New System.Drawing.Point(0, 354)
+        Me.btnCash.Name = "btnCash"
+        Me.btnCash.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnCash.Size = New System.Drawing.Size(200, 45)
+        Me.btnCash.TabIndex = 5
+        Me.btnCash.Text = "Administracion caja"
+        Me.btnCash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCash.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -130,84 +228,141 @@ Partial Class Dashboard
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 222)
+        Me.Button1.Location = New System.Drawing.Point(0, 399)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.Button1.Size = New System.Drawing.Size(200, 45)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Usuarios"
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Reportes sistema"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Panel2
+        'SubMenuReport
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 267)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(200, 87)
-        Me.Panel2.TabIndex = 4
+        Me.SubMenuReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuReport.Controls.Add(Me.btnReport2)
+        Me.SubMenuReport.Controls.Add(Me.btnReport1)
+        Me.SubMenuReport.Dock = System.Windows.Forms.DockStyle.Top
+        Me.SubMenuReport.Location = New System.Drawing.Point(0, 444)
+        Me.SubMenuReport.Name = "SubMenuReport"
+        Me.SubMenuReport.Size = New System.Drawing.Size(200, 87)
+        Me.SubMenuReport.TabIndex = 7
         '
-        'Button2
+        'btnReport2
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 40)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Button2.Size = New System.Drawing.Size(200, 40)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnReport2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnReport2.FlatAppearance.BorderSize = 0
+        Me.btnReport2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnReport2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnReport2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReport2.ForeColor = System.Drawing.Color.White
+        Me.btnReport2.Location = New System.Drawing.Point(0, 40)
+        Me.btnReport2.Name = "btnReport2"
+        Me.btnReport2.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnReport2.Size = New System.Drawing.Size(200, 40)
+        Me.btnReport2.TabIndex = 1
+        Me.btnReport2.Text = "Reporte2"
+        Me.btnReport2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnReport1
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(0, 0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
-        Me.Button3.Size = New System.Drawing.Size(200, 40)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Button1"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnReport1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnReport1.FlatAppearance.BorderSize = 0
+        Me.btnReport1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.btnReport1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
+        Me.btnReport1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReport1.ForeColor = System.Drawing.Color.White
+        Me.btnReport1.Location = New System.Drawing.Point(0, 0)
+        Me.btnReport1.Name = "btnReport1"
+        Me.btnReport1.Padding = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.btnReport1.Size = New System.Drawing.Size(200, 40)
+        Me.btnReport1.TabIndex = 0
+        Me.btnReport1.Text = "Reporte1"
+        Me.btnReport1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport1.UseVisualStyleBackColor = True
+        '
+        'PanelTop
+        '
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelTop.Location = New System.Drawing.Point(200, 0)
+        Me.PanelTop.Name = "PanelTop"
+        Me.PanelTop.Size = New System.Drawing.Size(784, 30)
+        Me.PanelTop.TabIndex = 1
+        '
+        'PanelBotton
+        '
+        Me.PanelBotton.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.PanelBotton.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelBotton.Location = New System.Drawing.Point(200, 531)
+        Me.PanelBotton.Name = "PanelBotton"
+        Me.PanelBotton.Size = New System.Drawing.Size(784, 30)
+        Me.PanelBotton.TabIndex = 2
+        '
+        'PanelBody
+        '
+        Me.PanelBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.PanelBody.Controls.Add(Me.ImgLogo)
+        Me.PanelBody.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelBody.Location = New System.Drawing.Point(200, 30)
+        Me.PanelBody.Name = "PanelBody"
+        Me.PanelBody.Size = New System.Drawing.Size(784, 501)
+        Me.PanelBody.TabIndex = 3
+        '
+        'ImgLogo
+        '
+        Me.ImgLogo.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ImgLogo.Image = CType(resources.GetObject("ImgLogo.Image"), System.Drawing.Image)
+        Me.ImgLogo.Location = New System.Drawing.Point(288, 145)
+        Me.ImgLogo.Name = "ImgLogo"
+        Me.ImgLogo.Size = New System.Drawing.Size(218, 220)
+        Me.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImgLogo.TabIndex = 0
+        Me.ImgLogo.TabStop = False
         '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Controls.Add(Me.PanelBody)
+        Me.Controls.Add(Me.PanelBotton)
+        Me.Controls.Add(Me.PanelTop)
         Me.Controls.Add(Me.LateralMenu)
         Me.MinimumSize = New System.Drawing.Size(900, 600)
         Me.Name = "Dashboard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"
         Me.LateralMenu.ResumeLayout(False)
-        Me.SubMenu.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
+        Me.SubMenuAdmin.ResumeLayout(False)
+        Me.SubMenuConfig.ResumeLayout(False)
+        Me.SubMenuReport.ResumeLayout(False)
+        Me.PanelBody.ResumeLayout(False)
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents LateralMenu As Panel
-    Public WithEvents btnMenu As Button
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Public WithEvents btnAdmin As Button
+    Friend WithEvents PanelLogo As Panel
+    Friend WithEvents SubMenuConfig As Panel
+    Friend WithEvents btnLetter As Button
+    Friend WithEvents btnFlat As Button
+    Public WithEvents btnConfig As Button
+    Friend WithEvents SubMenuAdmin As Panel
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents btnUser As Button
+    Friend WithEvents SubMenuReport As Panel
+    Friend WithEvents btnReport2 As Button
+    Friend WithEvents btnReport1 As Button
     Public WithEvents Button1 As Button
-    Friend WithEvents SubMenu As Panel
-    Friend WithEvents btnSubMenu2 As Button
-    Friend WithEvents btnSubMenu1 As Button
+    Public WithEvents btnCash As Button
+    Friend WithEvents PanelTop As Panel
+    Friend WithEvents PanelBotton As Panel
+    Friend WithEvents PanelBody As Panel
+    Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
+    Friend WithEvents ImgLogo As PictureBox
 End Class
