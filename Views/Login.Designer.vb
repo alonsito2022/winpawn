@@ -19,104 +19,99 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PanelLogin = New DevExpress.XtraEditors.GroupControl()
-        Me.btnLogin = New DevExpress.XtraEditors.SimpleButton()
         Me.lblPassword = New DevExpress.XtraEditors.LabelControl()
         Me.lblEmail = New DevExpress.XtraEditors.LabelControl()
-        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
-        Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
-        CType(Me.PanelLogin, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelLogin.SuspendLayout()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'PanelLogin
-        '
-        Me.PanelLogin.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PanelLogin.Controls.Add(Me.btnLogin)
-        Me.PanelLogin.Controls.Add(Me.lblPassword)
-        Me.PanelLogin.Controls.Add(Me.lblEmail)
-        Me.PanelLogin.Controls.Add(Me.txtPassword)
-        Me.PanelLogin.Controls.Add(Me.txtEmail)
-        Me.PanelLogin.Location = New System.Drawing.Point(12, 12)
-        Me.PanelLogin.Name = "PanelLogin"
-        Me.PanelLogin.Size = New System.Drawing.Size(758, 445)
-        Me.PanelLogin.TabIndex = 0
-        Me.PanelLogin.Text = "Login"
-        '
-        'btnLogin
-        '
-        Me.btnLogin.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Appearance.Options.UseFont = True
-        Me.btnLogin.Location = New System.Drawing.Point(329, 265)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(95, 37)
-        Me.btnLogin.TabIndex = 4
-        Me.btnLogin.Text = "Login"
         '
         'lblPassword
         '
-        Me.lblPassword.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblPassword.Appearance.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPassword.Appearance.ForeColor = System.Drawing.Color.White
         Me.lblPassword.Appearance.Options.UseFont = True
-        Me.lblPassword.Location = New System.Drawing.Point(299, 203)
+        Me.lblPassword.Appearance.Options.UseForeColor = True
+        Me.lblPassword.Location = New System.Drawing.Point(411, 263)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(79, 19)
+        Me.lblPassword.Size = New System.Drawing.Size(83, 19)
         Me.lblPassword.TabIndex = 3
         Me.lblPassword.Text = "Contraseña"
         '
         'lblEmail
         '
-        Me.lblEmail.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblEmail.Appearance.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Appearance.ForeColor = System.Drawing.Color.White
         Me.lblEmail.Appearance.Options.UseFont = True
-        Me.lblEmail.Location = New System.Drawing.Point(299, 137)
+        Me.lblEmail.Appearance.Options.UseForeColor = True
+        Me.lblEmail.Location = New System.Drawing.Point(411, 187)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(54, 19)
+        Me.lblEmail.Size = New System.Drawing.Size(100, 19)
         Me.lblEmail.TabIndex = 2
-        Me.lblEmail.Text = "Correo:"
+        Me.lblEmail.Text = "Usurio/Correo"
+        '
+        'btnLogin
+        '
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnLogin.Font = New System.Drawing.Font("Olimpos Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Location = New System.Drawing.Point(411, 347)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(261, 52)
+        Me.btnLogin.TabIndex = 4
+        Me.btnLogin.Text = "Ingresar"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'txtUser
+        '
+        Me.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtUser.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.Location = New System.Drawing.Point(411, 214)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(260, 32)
+        Me.txtUser.TabIndex = 5
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(299, 229)
+        Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txtPassword.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(411, 292)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Properties.Appearance.Options.UseFont = True
-        Me.txtPassword.Size = New System.Drawing.Size(155, 26)
-        Me.txtPassword.TabIndex = 1
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(299, 166)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Properties.Appearance.Options.UseFont = True
-        Me.txtEmail.Size = New System.Drawing.Size(155, 26)
-        Me.txtEmail.TabIndex = 0
+        Me.txtPassword.Size = New System.Drawing.Size(260, 32)
+        Me.txtPassword.TabIndex = 6
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.Appearance.Options.UseBackColor = True
+        Me.Appearance.Options.UseForeColor = True
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(782, 469)
-        Me.Controls.Add(Me.PanelLogin)
+        Me.ClientSize = New System.Drawing.Size(1024, 570)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.lblPassword)
+        Me.Controls.Add(Me.lblEmail)
+        Me.Font = New System.Drawing.Font("Olimpos Light", 12.0!)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        CType(Me.PanelLogin, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelLogin.ResumeLayout(False)
-        Me.PanelLogin.PerformLayout()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents PanelLogin As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents btnLogin As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents lblPassword As DevExpress.XtraEditors.LabelControl
     Friend WithEvents lblEmail As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtPassword As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtEmail As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents txtUser As TextBox
+    Friend WithEvents txtPassword As TextBox
 End Class

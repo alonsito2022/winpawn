@@ -56,9 +56,7 @@
     End Sub
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
-        btnUser.BackColor = Color.White
-        btnUser.ForeColor = Color.Black
         OpenChildForm(New Login())
-        HiddenSubMenu()
+        'HiddenSubMenu()
     End Sub
 End Class
