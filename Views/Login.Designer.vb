@@ -30,11 +30,9 @@ Partial Class Login
         '
         Me.lblPassword.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblPassword.Appearance.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPassword.Appearance.ForeColor = System.Drawing.Color.White
         Me.lblPassword.Appearance.Options.UseFont = True
-        Me.lblPassword.Appearance.Options.UseForeColor = True
-        Me.lblPassword.Location = New System.Drawing.Point(411, 263)
-        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lblPassword.Location = New System.Drawing.Point(404, 257)
+        Me.lblPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(83, 19)
         Me.lblPassword.TabIndex = 3
@@ -44,11 +42,9 @@ Partial Class Login
         '
         Me.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.lblEmail.Appearance.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Appearance.ForeColor = System.Drawing.Color.White
         Me.lblEmail.Appearance.Options.UseFont = True
-        Me.lblEmail.Appearance.Options.UseForeColor = True
-        Me.lblEmail.Location = New System.Drawing.Point(411, 187)
-        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.lblEmail.Location = New System.Drawing.Point(404, 181)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(100, 19)
         Me.lblEmail.TabIndex = 2
@@ -57,21 +53,24 @@ Partial Class Login
         'btnLogin
         '
         Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnLogin.Font = New System.Drawing.Font("Olimpos Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(411, 347)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(404, 338)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(261, 52)
         Me.btnLogin.TabIndex = 4
         Me.btnLogin.Text = "Ingresar"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'txtUser
         '
         Me.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtUser.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(411, 214)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUser.Location = New System.Drawing.Point(404, 208)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(260, 32)
         Me.txtUser.TabIndex = 5
@@ -80,18 +79,16 @@ Partial Class Login
         '
         Me.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.txtPassword.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(411, 292)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Location = New System.Drawing.Point(404, 286)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(260, 32)
         Me.txtPassword.TabIndex = 6
         '
         'Login
         '
-        Me.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
-        Me.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.Appearance.BackColor = System.Drawing.SystemColors.Control
         Me.Appearance.Options.UseBackColor = True
-        Me.Appearance.Options.UseForeColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1024, 570)
@@ -100,8 +97,8 @@ Partial Class Login
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblEmail)
-        Me.Font = New System.Drawing.Font("Olimpos Light", 12.0!)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"

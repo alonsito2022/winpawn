@@ -1,6 +1,5 @@
 ﻿Imports System.Net.Http
 Imports System.Text
-Imports Models.LoginResult
 Imports Graphql.Users
 Imports Models
 
@@ -34,5 +33,23 @@ Public Class Login
         Else
             MessageBox.Show("No se pudo iniciar sesión.", "Error")
         End If
+    End Sub
+    Private Sub BackgroundForm()
+        ' Crear un degradado lineal horizontal
+        Dim bmp As New Bitmap(Me.Width, Me.Height)
+        Using g As Graphics = Graphics.FromImage(bmp)
+            Dim rect As New Rectangle(0, 0, Me.Width, Me.Height)
+            Dim brush As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(28, 70, 124), Color.FromArgb(16, 59, 115), Drawing2D.LinearGradientMode.Horizontal)
+            g.FillRectangle(brush, rect)
+        End Using
+        ' Establecer la imagen de fondo del panel como el degradado
+        Me.BackgroundImage = bmp
+        Me.BackgroundImageLayout = ImageLayout.Stretch
+        lblEmail.ForeColor = Color.White
+        lblPassword.ForeColor = Color.White
+    End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BackgroundForm()
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,15 +20,14 @@ Partial Class Dashboard
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.LateralMenu = New System.Windows.Forms.Panel()
         Me.SubMenuReport = New System.Windows.Forms.Panel()
         Me.btnReport2 = New System.Windows.Forms.Button()
         Me.btnReport1 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnReport = New System.Windows.Forms.Button()
         Me.btnCash = New System.Windows.Forms.Button()
         Me.SubMenuConfig = New System.Windows.Forms.Panel()
         Me.btnLetter = New System.Windows.Forms.Button()
@@ -39,28 +38,28 @@ Partial Class Dashboard
         Me.btnUser = New System.Windows.Forms.Button()
         Me.btnAdmin = New System.Windows.Forms.Button()
         Me.PanelLogo = New System.Windows.Forms.Panel()
+        Me.lblLogo = New System.Windows.Forms.Label()
         Me.PanelTop = New System.Windows.Forms.Panel()
         Me.txtUsername = New System.Windows.Forms.Label()
         Me.PanelBotton = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.ImgLogo = New System.Windows.Forms.PictureBox()
-        Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.LateralMenu.SuspendLayout()
         Me.SubMenuReport.SuspendLayout()
         Me.SubMenuConfig.SuspendLayout()
         Me.SubMenuAdmin.SuspendLayout()
+        Me.PanelLogo.SuspendLayout()
         Me.PanelTop.SuspendLayout()
         Me.PanelBody.SuspendLayout()
         CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LateralMenu
         '
         Me.LateralMenu.AutoScroll = True
-        Me.LateralMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(7, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.LateralMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.LateralMenu.Controls.Add(Me.SubMenuReport)
-        Me.LateralMenu.Controls.Add(Me.Button1)
+        Me.LateralMenu.Controls.Add(Me.btnReport)
         Me.LateralMenu.Controls.Add(Me.btnCash)
         Me.LateralMenu.Controls.Add(Me.SubMenuConfig)
         Me.LateralMenu.Controls.Add(Me.btnConfig)
@@ -75,7 +74,7 @@ Partial Class Dashboard
         '
         'SubMenuReport
         '
-        Me.SubMenuReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuReport.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.SubMenuReport.Controls.Add(Me.btnReport2)
         Me.SubMenuReport.Controls.Add(Me.btnReport1)
         Me.SubMenuReport.Dock = System.Windows.Forms.DockStyle.Top
@@ -86,10 +85,9 @@ Partial Class Dashboard
         '
         'btnReport2
         '
+        Me.btnReport2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReport2.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnReport2.FlatAppearance.BorderSize = 0
-        Me.btnReport2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnReport2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnReport2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReport2.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReport2.ForeColor = System.Drawing.Color.White
@@ -104,10 +102,9 @@ Partial Class Dashboard
         '
         'btnReport1
         '
+        Me.btnReport1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnReport1.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnReport1.FlatAppearance.BorderSize = 0
-        Me.btnReport1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnReport1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnReport1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReport1.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReport1.ForeColor = System.Drawing.Color.White
@@ -120,30 +117,28 @@ Partial Class Dashboard
         Me.btnReport1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnReport1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnReport
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(0, 399)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(200, 45)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Reportes sistema"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnReport.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnReport.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnReport.FlatAppearance.BorderSize = 0
+        Me.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReport.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReport.ForeColor = System.Drawing.Color.White
+        Me.btnReport.Location = New System.Drawing.Point(0, 399)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnReport.Size = New System.Drawing.Size(200, 45)
+        Me.btnReport.TabIndex = 6
+        Me.btnReport.Text = "Reportes sistema"
+        Me.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReport.UseVisualStyleBackColor = True
         '
         'btnCash
         '
+        Me.btnCash.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCash.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnCash.FlatAppearance.BorderSize = 0
-        Me.btnCash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnCash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCash.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCash.ForeColor = System.Drawing.Color.White
@@ -158,7 +153,7 @@ Partial Class Dashboard
         '
         'SubMenuConfig
         '
-        Me.SubMenuConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuConfig.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.SubMenuConfig.Controls.Add(Me.btnLetter)
         Me.SubMenuConfig.Controls.Add(Me.btnFlat)
         Me.SubMenuConfig.Dock = System.Windows.Forms.DockStyle.Top
@@ -169,10 +164,9 @@ Partial Class Dashboard
         '
         'btnLetter
         '
+        Me.btnLetter.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLetter.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnLetter.FlatAppearance.BorderSize = 0
-        Me.btnLetter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnLetter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnLetter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLetter.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLetter.ForeColor = System.Drawing.Color.White
@@ -187,10 +181,9 @@ Partial Class Dashboard
         '
         'btnFlat
         '
+        Me.btnFlat.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFlat.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnFlat.FlatAppearance.BorderSize = 0
-        Me.btnFlat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnFlat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnFlat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFlat.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFlat.ForeColor = System.Drawing.Color.White
@@ -205,10 +198,9 @@ Partial Class Dashboard
         '
         'btnConfig
         '
+        Me.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnConfig.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnConfig.FlatAppearance.BorderSize = 0
-        Me.btnConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfig.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfig.ForeColor = System.Drawing.Color.White
@@ -223,7 +215,7 @@ Partial Class Dashboard
         '
         'SubMenuAdmin
         '
-        Me.SubMenuAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SubMenuAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.SubMenuAdmin.Controls.Add(Me.btnPrint)
         Me.SubMenuAdmin.Controls.Add(Me.btnUser)
         Me.SubMenuAdmin.Dock = System.Windows.Forms.DockStyle.Top
@@ -234,10 +226,9 @@ Partial Class Dashboard
         '
         'btnPrint
         '
+        Me.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnPrint.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnPrint.FlatAppearance.BorderSize = 0
-        Me.btnPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrint.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.ForeColor = System.Drawing.Color.White
@@ -252,10 +243,9 @@ Partial Class Dashboard
         '
         'btnUser
         '
+        Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUser.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnUser.FlatAppearance.BorderSize = 0
-        Me.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(1, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUser.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUser.ForeColor = System.Drawing.Color.White
@@ -270,10 +260,9 @@ Partial Class Dashboard
         '
         'btnAdmin
         '
+        Me.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnAdmin.FlatAppearance.BorderSize = 0
-        Me.btnAdmin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(11, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(10, Byte), Integer))
         Me.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdmin.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdmin.ForeColor = System.Drawing.Color.White
@@ -288,15 +277,28 @@ Partial Class Dashboard
         '
         'PanelLogo
         '
+        Me.PanelLogo.Controls.Add(Me.lblLogo)
         Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
         Me.PanelLogo.Name = "PanelLogo"
         Me.PanelLogo.Size = New System.Drawing.Size(200, 90)
         Me.PanelLogo.TabIndex = 0
         '
+        'lblLogo
+        '
+        Me.lblLogo.AutoSize = True
+        Me.lblLogo.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogo.Font = New System.Drawing.Font("Olimpos Bold", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLogo.ForeColor = System.Drawing.Color.White
+        Me.lblLogo.Location = New System.Drawing.Point(12, 21)
+        Me.lblLogo.Name = "lblLogo"
+        Me.lblLogo.Size = New System.Drawing.Size(174, 48)
+        Me.lblLogo.TabIndex = 0
+        Me.lblLogo.Text = "Sistema"
+        '
         'PanelTop
         '
-        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.txtUsername)
         Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTop.Location = New System.Drawing.Point(200, 0)
@@ -319,7 +321,7 @@ Partial Class Dashboard
         '
         'PanelBotton
         '
-        Me.PanelBotton.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(21, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.PanelBotton.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(100, Byte), Integer))
         Me.PanelBotton.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelBotton.Location = New System.Drawing.Point(200, 531)
         Me.PanelBotton.Name = "PanelBotton"
@@ -328,7 +330,7 @@ Partial Class Dashboard
         '
         'PanelBody
         '
-        Me.PanelBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(45, Byte), Integer))
+        Me.PanelBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.PanelBody.Controls.Add(Me.ImgLogo)
         Me.PanelBody.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelBody.Location = New System.Drawing.Point(200, 30)
@@ -364,11 +366,12 @@ Partial Class Dashboard
         Me.SubMenuReport.ResumeLayout(False)
         Me.SubMenuConfig.ResumeLayout(False)
         Me.SubMenuAdmin.ResumeLayout(False)
+        Me.PanelLogo.ResumeLayout(False)
+        Me.PanelLogo.PerformLayout()
         Me.PanelTop.ResumeLayout(False)
         Me.PanelTop.PerformLayout()
         Me.PanelBody.ResumeLayout(False)
         CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -386,12 +389,12 @@ Partial Class Dashboard
     Friend WithEvents SubMenuReport As Panel
     Friend WithEvents btnReport2 As Button
     Friend WithEvents btnReport1 As Button
-    Public WithEvents Button1 As Button
+    Public WithEvents btnReport As Button
     Public WithEvents btnCash As Button
     Friend WithEvents PanelTop As Panel
     Friend WithEvents PanelBotton As Panel
     Friend WithEvents PanelBody As Panel
-    Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
     Friend WithEvents ImgLogo As PictureBox
     Friend WithEvents txtUsername As Label
+    Friend WithEvents lblLogo As Label
 End Class

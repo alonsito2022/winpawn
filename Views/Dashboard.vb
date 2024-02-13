@@ -49,6 +49,69 @@
     End Sub
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CustomizeDesing()
+        BackgroundForm()
+    End Sub
+    Private Sub BackgroundForm()
+        ' Crear un degradado lineal horizontal
+        Dim bmp As New Bitmap(LateralMenu.Width, LateralMenu.Height)
+        Using g As Graphics = Graphics.FromImage(bmp)
+            Dim rect As New Rectangle(0, 0, LateralMenu.Width, LateralMenu.Height)
+            Dim brush As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(15, 46, 84), Color.FromArgb(24, 70, 130), Drawing2D.LinearGradientMode.Horizontal)
+            g.FillRectangle(brush, rect)
+        End Using
+        ' Establecer la imagen de fondo del panel como el degradado
+        LateralMenu.BackgroundImage = bmp
+        LateralMenu.BackgroundImageLayout = ImageLayout.Stretch ' Ajustar la imagen al tamaño del panel
+        ' Establecer el color de fondo sólido del panel
+        'LateralMenu.BackColor = Color.FromArgb(24, 70, 130)
+
+        PanelLogo.BackgroundImage = bmp
+        PanelLogo.BackgroundImageLayout = ImageLayout.Stretch
+
+        btnAdmin.BackgroundImage = bmp
+        btnAdmin.BackgroundImageLayout = ImageLayout.Stretch
+
+        btnConfig.BackgroundImage = bmp
+        btnConfig.BackgroundImageLayout = ImageLayout.Stretch
+
+        btnCash.BackgroundImage = bmp
+        btnCash.BackgroundImageLayout = ImageLayout.Stretch
+
+        btnReport.BackgroundImage = bmp
+        btnReport.BackgroundImageLayout = ImageLayout.Stretch
+
+        Dim bmp1 As New Bitmap(PanelTop.Width, PanelTop.Height)
+        Using g As Graphics = Graphics.FromImage(bmp1)
+            Dim rect As New Rectangle(0, 0, PanelTop.Width, PanelTop.Height)
+            Dim brush As New Drawing2D.LinearGradientBrush(rect, Color.FromArgb(28, 70, 124), Color.FromArgb(16, 59, 115), Drawing2D.LinearGradientMode.Horizontal)
+            g.FillRectangle(brush, rect)
+        End Using
+
+        PanelTop.BackgroundImage = bmp1
+        PanelTop.BackgroundImageLayout = ImageLayout.Stretch
+
+        PanelBotton.BackgroundImage = bmp1
+        PanelBotton.BackgroundImageLayout = ImageLayout.Stretch
+    End Sub
+    Private Sub PanelBody_Paint(sender As Object, e As PaintEventArgs) Handles PanelBody.Paint
+        Dim borderColor As Color = Color.White ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde derecho
+
+        Dim g As Graphics = e.Graphics
+        Dim pen As New Pen(borderColor, borderWidth)
+
+        ' Dibujar el borde derecho del panel
+        g.DrawLine(pen, borderWidth, 0, borderWidth, PanelBody.Height)
+    End Sub
+    Private Sub PanelLogo_Paint(sender As Object, e As PaintEventArgs) Handles PanelLogo.Paint
+        Dim borderColor As Color = Color.White ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde derecho
+
+        Dim g As Graphics = e.Graphics
+        Dim pen As New Pen(borderColor, borderWidth)
+
+        ' Dibujar el borde derecho del panel
+        g.DrawLine(pen, 0, PanelLogo.Height - borderWidth, PanelLogo.Width, PanelLogo.Height - borderWidth)
     End Sub
 
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
@@ -57,6 +120,26 @@
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
         OpenChildForm(New Login())
-        'HiddenSubMenu()
     End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+
+    End Sub
+
+    Private Sub btnFlat_Click(sender As Object, e As EventArgs) Handles btnFlat.Click
+
+    End Sub
+
+    Private Sub btnLetter_Click(sender As Object, e As EventArgs) Handles btnLetter.Click
+
+    End Sub
+
+    Private Sub btnReport1_Click(sender As Object, e As EventArgs) Handles btnReport1.Click
+
+    End Sub
+
+    Private Sub btnReport2_Click(sender As Object, e As EventArgs) Handles btnReport2.Click
+
+    End Sub
+
 End Class
