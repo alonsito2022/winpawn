@@ -53,7 +53,7 @@ Partial Class Login
         'btnLogin
         '
         Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(33, Byte), Integer))
+        Me.btnLogin.BackColor = System.Drawing.Color.Maroon
         Me.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnLogin.Font = New System.Drawing.Font("Olimpos Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
@@ -74,6 +74,7 @@ Partial Class Login
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(260, 32)
         Me.txtUser.TabIndex = 5
+        Me.txtUser.Text = "soluciones@gmail.com"
         '
         'txtPassword
         '

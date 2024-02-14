@@ -22,6 +22,7 @@ Partial Class Dashboard
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.LateralMenu = New System.Windows.Forms.Panel()
         Me.SubMenuReport = New System.Windows.Forms.Panel()
@@ -44,6 +45,15 @@ Partial Class Dashboard
         Me.PanelBotton = New System.Windows.Forms.Panel()
         Me.PanelBody = New System.Windows.Forms.Panel()
         Me.ImgLogo = New System.Windows.Forms.PictureBox()
+        Me.RadialMenuDashboard = New DevExpress.XtraBars.Ribbon.RadialMenu(Me.components)
+        Me.Radial_btnUsers = New DevExpress.XtraBars.BarButtonItem()
+        Me.Radia_btnBusiness = New DevExpress.XtraBars.BarButtonItem()
+        Me.Radial_btnSubsidiaries = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
         Me.LateralMenu.SuspendLayout()
         Me.SubMenuReport.SuspendLayout()
         Me.SubMenuConfig.SuspendLayout()
@@ -52,6 +62,8 @@ Partial Class Dashboard
         Me.PanelTop.SuspendLayout()
         Me.PanelBody.SuspendLayout()
         CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadialMenuDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LateralMenu
@@ -288,6 +300,7 @@ Partial Class Dashboard
         '
         Me.lblLogo.AutoSize = True
         Me.lblLogo.BackColor = System.Drawing.Color.Transparent
+        Me.lblLogo.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblLogo.Font = New System.Drawing.Font("Olimpos Bold", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblLogo.ForeColor = System.Drawing.Color.White
         Me.lblLogo.Location = New System.Drawing.Point(12, 21)
@@ -311,6 +324,7 @@ Partial Class Dashboard
         Me.txtUsername.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtUsername.AutoSize = True
+        Me.txtUsername.BackColor = System.Drawing.Color.Transparent
         Me.txtUsername.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.ForeColor = System.Drawing.Color.White
         Me.txtUsername.Location = New System.Drawing.Point(775, 6)
@@ -331,10 +345,12 @@ Partial Class Dashboard
         'PanelBody
         '
         Me.PanelBody.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(70, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.PanelBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PanelBody.Controls.Add(Me.ImgLogo)
         Me.PanelBody.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelBody.Location = New System.Drawing.Point(200, 30)
         Me.PanelBody.Name = "PanelBody"
+        Me.PanelBody.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
         Me.PanelBody.Size = New System.Drawing.Size(784, 501)
         Me.PanelBody.TabIndex = 3
         '
@@ -342,12 +358,110 @@ Partial Class Dashboard
         '
         Me.ImgLogo.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ImgLogo.Image = CType(resources.GetObject("ImgLogo.Image"), System.Drawing.Image)
-        Me.ImgLogo.Location = New System.Drawing.Point(288, 145)
+        Me.ImgLogo.Location = New System.Drawing.Point(290, 145)
         Me.ImgLogo.Name = "ImgLogo"
         Me.ImgLogo.Size = New System.Drawing.Size(218, 220)
         Me.ImgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ImgLogo.TabIndex = 0
         Me.ImgLogo.TabStop = False
+        '
+        'RadialMenuDashboard
+        '
+        Me.RadialMenuDashboard.AutoExpand = True
+        Me.RadialMenuDashboard.ButtonRadius = 20
+        Me.RadialMenuDashboard.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.Radial_btnUsers), New DevExpress.XtraBars.LinkPersistInfo(Me.Radia_btnBusiness), New DevExpress.XtraBars.LinkPersistInfo(Me.Radial_btnSubsidiaries)})
+        Me.RadialMenuDashboard.Manager = Me.BarManager1
+        Me.RadialMenuDashboard.Name = "RadialMenuDashboard"
+        '
+        'Radial_btnUsers
+        '
+        Me.Radial_btnUsers.Caption = "Lista Usuarios"
+        Me.Radial_btnUsers.Id = 0
+        Me.Radial_btnUsers.ItemAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radial_btnUsers.ItemAppearance.Normal.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Radial_btnUsers.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radial_btnUsers.ItemAppearance.Normal.Options.UseBackColor = True
+        Me.Radial_btnUsers.ItemAppearance.Normal.Options.UseFont = True
+        Me.Radial_btnUsers.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.Radial_btnUsers.ItemInMenuAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radial_btnUsers.ItemInMenuAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radial_btnUsers.ItemInMenuAppearance.Normal.Options.UseBackColor = True
+        Me.Radial_btnUsers.ItemInMenuAppearance.Normal.Options.UseForeColor = True
+        Me.Radial_btnUsers.Name = "Radial_btnUsers"
+        '
+        'Radia_btnBusiness
+        '
+        Me.Radia_btnBusiness.Caption = "Empresa"
+        Me.Radia_btnBusiness.Id = 1
+        Me.Radia_btnBusiness.ItemAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radia_btnBusiness.ItemAppearance.Normal.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Radia_btnBusiness.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radia_btnBusiness.ItemAppearance.Normal.Options.UseBackColor = True
+        Me.Radia_btnBusiness.ItemAppearance.Normal.Options.UseFont = True
+        Me.Radia_btnBusiness.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.Radia_btnBusiness.ItemInMenuAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radia_btnBusiness.ItemInMenuAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radia_btnBusiness.ItemInMenuAppearance.Normal.Options.UseBackColor = True
+        Me.Radia_btnBusiness.ItemInMenuAppearance.Normal.Options.UseForeColor = True
+        Me.Radia_btnBusiness.Name = "Radia_btnBusiness"
+        '
+        'Radial_btnSubsidiaries
+        '
+        Me.Radial_btnSubsidiaries.Caption = "Sedes"
+        Me.Radial_btnSubsidiaries.Id = 2
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.Font = New System.Drawing.Font("Olimpos Light", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.Options.UseBackColor = True
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.Options.UseFont = True
+        Me.Radial_btnSubsidiaries.ItemAppearance.Normal.Options.UseForeColor = True
+        Me.Radial_btnSubsidiaries.ItemInMenuAppearance.Normal.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.Radial_btnSubsidiaries.ItemInMenuAppearance.Normal.ForeColor = System.Drawing.Color.White
+        Me.Radial_btnSubsidiaries.ItemInMenuAppearance.Normal.Options.UseBackColor = True
+        Me.Radial_btnSubsidiaries.ItemInMenuAppearance.Normal.Options.UseForeColor = True
+        Me.Radial_btnSubsidiaries.Name = "Radial_btnSubsidiaries"
+        '
+        'BarManager1
+        '
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.Radial_btnUsers, Me.Radia_btnBusiness, Me.Radial_btnSubsidiaries})
+        Me.BarManager1.MaxItemId = 3
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(984, 0)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 561)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(984, 0)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 561)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(984, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 561)
         '
         'Dashboard
         '
@@ -358,6 +472,10 @@ Partial Class Dashboard
         Me.Controls.Add(Me.PanelBotton)
         Me.Controls.Add(Me.PanelTop)
         Me.Controls.Add(Me.LateralMenu)
+        Me.Controls.Add(Me.barDockControlLeft)
+        Me.Controls.Add(Me.barDockControlRight)
+        Me.Controls.Add(Me.barDockControlBottom)
+        Me.Controls.Add(Me.barDockControlTop)
         Me.MinimumSize = New System.Drawing.Size(900, 600)
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -372,7 +490,10 @@ Partial Class Dashboard
         Me.PanelTop.PerformLayout()
         Me.PanelBody.ResumeLayout(False)
         CType(Me.ImgLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadialMenuDashboard, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -397,4 +518,13 @@ Partial Class Dashboard
     Friend WithEvents ImgLogo As PictureBox
     Friend WithEvents txtUsername As Label
     Friend WithEvents lblLogo As Label
+    Friend WithEvents RadialMenuDashboard As DevExpress.XtraBars.Ribbon.RadialMenu
+    Friend WithEvents Radial_btnUsers As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents Radia_btnBusiness As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents Radial_btnSubsidiaries As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
+    Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
 End Class

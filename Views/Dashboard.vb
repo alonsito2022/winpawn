@@ -1,4 +1,6 @@
-﻿Public Class Dashboard
+﻿Imports Models
+Public Class Dashboard
+    Dim par_user As New User
     Public Sub CustomizeDesing()
         SubMenuAdmin.Visible = False
         SubMenuConfig.Visible = False
@@ -50,6 +52,22 @@
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CustomizeDesing()
         BackgroundForm()
+        HiddenInitial()
+        OpenChildForm(New Login())
+    End Sub
+    Public Sub HiddenInitial()
+        PanelTop.Visible = False
+        PanelLogo.Visible = False
+        LateralMenu.Visible = False
+        PanelBotton.Visible = False
+    End Sub
+    Public Sub ShowInitial()
+        PanelTop.Visible = True
+        PanelLogo.Visible = True
+        LateralMenu.Visible = True
+        PanelBotton.Visible = True
+        PanelBody.Controls.Clear()
+        PanelBody.Controls.Add(ImgLogo)
     End Sub
     Private Sub BackgroundForm()
         ' Crear un degradado lineal horizontal
@@ -94,8 +112,8 @@
         PanelBotton.BackgroundImageLayout = ImageLayout.Stretch
     End Sub
     Private Sub PanelBody_Paint(sender As Object, e As PaintEventArgs) Handles PanelBody.Paint
-        Dim borderColor As Color = Color.White ' Color del borde derecho
-        Dim borderWidth As Integer = 2 ' Ancho del borde derecho
+        Dim borderColor As Color = Color.FromArgb(53, 113, 182) ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde Izquierdo
 
         Dim g As Graphics = e.Graphics
         Dim pen As New Pen(borderColor, borderWidth)
@@ -104,8 +122,8 @@
         g.DrawLine(pen, borderWidth, 0, borderWidth, PanelBody.Height)
     End Sub
     Private Sub PanelLogo_Paint(sender As Object, e As PaintEventArgs) Handles PanelLogo.Paint
-        Dim borderColor As Color = Color.White ' Color del borde derecho
-        Dim borderWidth As Integer = 2 ' Ancho del borde derecho
+        Dim borderColor As Color = Color.FromArgb(53, 113, 182) ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde abajo
 
         Dim g As Graphics = e.Graphics
         Dim pen As New Pen(borderColor, borderWidth)
@@ -113,13 +131,33 @@
         ' Dibujar el borde derecho del panel
         g.DrawLine(pen, 0, PanelLogo.Height - borderWidth, PanelLogo.Width, PanelLogo.Height - borderWidth)
     End Sub
+    Private Sub PanelTop_Paint(sender As Object, e As PaintEventArgs) Handles PanelTop.Paint
+        Dim borderColor As Color = Color.FromArgb(53, 113, 182) ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde abajo
+
+        Dim g As Graphics = e.Graphics
+        Dim pen As New Pen(borderColor, borderWidth)
+
+        ' Dibujar el borde derecho del panel
+        g.DrawLine(pen, 0, PanelTop.Height - borderWidth, PanelTop.Width, PanelTop.Height - borderWidth)
+    End Sub
+    Private Sub PanelBotton_Paint(sender As Object, e As PaintEventArgs) Handles PanelBotton.Paint
+        Dim borderColor As Color = Color.FromArgb(53, 113, 182) ' Color del borde derecho
+        Dim borderWidth As Integer = 2 ' Ancho del borde superior
+
+        Dim g As Graphics = e.Graphics
+        Dim pen As New Pen(borderColor, borderWidth)
+
+        'Dibujar el borde superior del panel
+        g.DrawLine(pen, 0, 0, PanelBotton.Width, 0)
+    End Sub
 
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
         ShowSubMenu(SubMenuAdmin)
     End Sub
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
-        OpenChildForm(New Login())
+        RadialMenuDashboard.ShowPopup(New Drawing.Point(Me.Width / 2, Me.Height / 2))
     End Sub
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
@@ -142,4 +180,8 @@
 
     End Sub
 
+    Private Sub lblLogo_Click(sender As Object, e As EventArgs) Handles lblLogo.Click
+        PanelBody.Controls.Clear()
+        PanelBody.Controls.Add(ImgLogo)
+    End Sub
 End Class

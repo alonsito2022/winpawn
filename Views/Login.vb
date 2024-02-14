@@ -16,7 +16,7 @@ Public Class Login
         ElseIf result.User IsNot Nothing Then
             ' Hacer algo con el usuario, por ejemplo, mostrar un mensaje de bienvenida
             'MessageBox.Show("¡Bienvenido, " & result.User.firstName & "!", "Inicio de sesión exitoso")
-            Dashboard.txtUsername.Text = result.User.firstName + " " + result.User.lastName
+            Dashboard.txtUsername.Text = "Usuario: " + result.User.firstName + " " + result.User.lastName
 
             ' Ajustar el tamaño del Label para que quepa todo el texto
             Dashboard.txtUsername.AutoSize = True
@@ -30,8 +30,10 @@ Public Class Login
 
             ' Alinear el texto a la derecha para que el texto largo se muestre a la izquierda
             Dashboard.txtUsername.TextAlign = ContentAlignment.MiddleRight
+            Dashboard.ShowInitial()
         Else
             MessageBox.Show("No se pudo iniciar sesión.", "Error")
+            Dashboard.HiddenInitial()
         End If
     End Sub
     Private Sub BackgroundForm()
@@ -52,4 +54,5 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BackgroundForm()
     End Sub
+
 End Class
