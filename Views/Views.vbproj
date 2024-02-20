@@ -136,6 +136,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewPlanForm.Designer.vb">
+      <DependentUpon>NewPlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewPlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plan.Designer.vb">
+      <DependentUpon>Plan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Plan.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
@@ -153,6 +165,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPlanForm.resx">
+      <DependentUpon>NewPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plan.resx">
+      <DependentUpon>Plan.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -165,7 +165,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub btnFlat_Click(sender As Object, e As EventArgs) Handles btnFlat.Click
-
+        OpenChildForm(New Plan())
     End Sub
 
     Private Sub btnLetter_Click(sender As Object, e As EventArgs) Handles btnLetter.Click
@@ -183,5 +183,9 @@ Public Class Dashboard
     Private Sub lblLogo_Click(sender As Object, e As EventArgs) Handles lblLogo.Click
         PanelBody.Controls.Clear()
         PanelBody.Controls.Add(ImgLogo)
+    End Sub
+
+    Private Sub btnConfig_Click(sender As Object, e As EventArgs) Handles btnConfig.Click
+        ShowSubMenu(SubMenuConfig)
     End Sub
 End Class
